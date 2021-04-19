@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
 
     Transform target;
     NavMeshAgent agent;
+
+    float distanceOffset = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +26,15 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-
+         //checks for the distance between enemy and player when its less the the look radius starts chasing player
         if (distance <= lookRadius)
         {
             agent.isStopped = false;
             agent.SetDestination(target.position);
             ChaseAnimation();
 
-            if (distance <= agent.stoppingDistance + .5)
+            //when it reaches stopping distance stops chasing faces player and attacks
+            if (distance <= agent.stoppingDistance + distanceOffset)
             {
                 FaceTarget();
                 AttackAnimation();
@@ -52,7 +55,6 @@ public class EnemyController : MonoBehaviour
         enemyAnimations.SetBool("isChasing", false);
         enemyAnimations.SetBool("isIdle", true);
     }
-
 
     private void ChaseAnimation()
     {
@@ -76,6 +78,7 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
+    //rotates enemy to face the player
     void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;

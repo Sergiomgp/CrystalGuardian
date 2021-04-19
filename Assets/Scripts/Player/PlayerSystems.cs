@@ -139,9 +139,7 @@ public class PlayerSystems : MonoBehaviour
     private IEnumerator ShieldColdown()
     {
         onCooldown = true;
-        Debug.Log("shield is regenning");
         yield return new WaitForSeconds(cooldownTime);
-        Debug.Log("Shield is ready again");
         onCooldown = false;
     }
 
@@ -172,7 +170,7 @@ public class PlayerSystems : MonoBehaviour
     #endregion
 
     #region HP SYSTEM METHODS
-
+    
     public void PlayerTakeDamage(float ammount)
     {
         
@@ -184,6 +182,7 @@ public class PlayerSystems : MonoBehaviour
             hp_text.text = player.currentHp.ToString("F0");
 
         }
+        //checks if player used shield, if true, player takes no damage
         if (player.isShielded && player.isPlayerAlive)
         {
             Debug.Log("Player is shielded, damage is negated");

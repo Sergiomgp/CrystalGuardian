@@ -6,9 +6,6 @@ public class Left_Hand_AnimationController : MonoBehaviour
 {
     private Animator anim;
     private GameObject windEffect;
-
-
-
     private PlayerAttack LH_shoot;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +18,7 @@ public class Left_Hand_AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //triggers animation on the left hand and enables charge effect gameobject
         if (LH_shoot.leftHand)
         {
             anim.SetBool("IsPressed", true);

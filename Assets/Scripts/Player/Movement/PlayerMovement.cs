@@ -98,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(currentStamina); logs tue current stamina value
     }
 
+    //regens player´s stamina
     private IEnumerator StaminaRegen()
     {
 

@@ -38,12 +38,12 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-            pSystems.ShieldCheck();
-            }
-
+        //checks for shield
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+             pSystems.ShieldCheck();
+        }
+        //debug stuff
         if (Input.GetKeyDown(KeyCode.F))
         {
             pSystems.PlayerTakeDamage(20);

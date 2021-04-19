@@ -6,10 +6,6 @@ public class Right_Hand_AnimationController : MonoBehaviour
 {
     private Animator anim;
     private GameObject flameEffect;
-
-    // nao me lembro do que faz isto checkar depois
-    //[SerializeField]private ParticleSystem rhChargeEffect;
-
     private PlayerAttack RH_shoot;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +18,7 @@ public class Right_Hand_AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //triggers animation on the right hand and enables charge effect gameobject
         if (RH_shoot.rightHand)
         {
             anim.SetBool("IsPressed", true);
