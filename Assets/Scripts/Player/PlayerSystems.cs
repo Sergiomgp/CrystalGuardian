@@ -20,7 +20,7 @@ public class PlayerSystems : MonoBehaviour
 
     #region SHIELD SYSTEM VARIABLES
     [SerializeField]private bool onCooldown;
-
+    private GameObject shield;
     private float cooldownTime = 2f;
     private Coroutine ShieldCD;
 
@@ -40,6 +40,8 @@ public class PlayerSystems : MonoBehaviour
     {
         //getting reference for player stats script
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        //getting reference to the shield object
+        shield = GameObject.FindGameObjectWithTag("Shield");
     }
 
     void Start()
@@ -51,15 +53,14 @@ public class PlayerSystems : MonoBehaviour
         hpBar.maxValue = player.playerHp;
         hpBar.value = player.currentHp;
         hp_text.text = player.currentHp.ToString();
+
+        shield.SetActive(false);
     }
 
     private void Update()
     {
         ManaCheck();
     }
-
-
-
 
     #region MANA SYSTEM METHODS
     void ManaCheck()
@@ -147,21 +148,14 @@ public class PlayerSystems : MonoBehaviour
     {
         //changes player tag to shielded so it doesnt take damage during its duration
         player.isShielded = true;
-
-        Debug.Log("Shield is currently" + player.isShielded);
-
-        //play particle effects for the shield
-        //shield.SetActive(true);
+        shield.SetActive(true);
         //play sound effects for the shield
 
         yield return new WaitForSeconds(3f);
 
         //reverts the tag back to player so damage is calculated normally
         player.isShielded = false;
-
-        //shield.SetActive(false);
-        //Stop particle effects for the shield
-        Debug.Log("Shield is now" + player.isShielded);
+        shield.SetActive(false);
 
         //starts shield cooldown
         StartCoroutine(ShieldColdown());
