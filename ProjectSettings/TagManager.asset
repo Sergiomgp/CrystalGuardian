@@ -13,6 +13,8 @@ TagManager:
   - Trap
   - Enemy
   - DamageSource
+  - Particles
+  - PetraParticle
   layers:
   - Default
   - TransparentFX
