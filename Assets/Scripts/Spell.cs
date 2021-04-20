@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Spell : MonoBehaviour
 {
+    Rigidbody rb;
     //projectile collision script for destroying upon impact with other objects
     PlayerAttack player;
+
+    RaycastHit hit;
+    //Collision Particle Effects
+    public GameObject collisionExplosion;
     //reference variables//
     //player script
     private float spellChargeTime;
@@ -13,7 +18,6 @@ public class Spell : MonoBehaviour
     //enemy script
     private string enemyWeakness;
     private string enemyResistence;
-
 
     //damage variables
     [SerializeField] private float baseDamage;
@@ -26,8 +30,11 @@ public class Spell : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
-    }
 
+        //ignores collisions between the spells and the player
+        rb = gameObject.GetComponent<Rigidbody>();
+        Physics.IgnoreLayerCollision(0, 9);
+    }
     private void Update()
     {
         CalculateDamage();
@@ -58,17 +65,16 @@ public class Spell : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        //instantiates explosion particles in the position of the collision
+        if (Physics.Raycast(rb.transform.position, transform.TransformDirection(Vector3.forward), out hit))
+        {
+            Instantiate(collisionExplosion, transform.position, Quaternion.identity);
+        }
         //checks for collision with other objets that arent enemies
-        if (collision.gameObject.tag != "Bullet" && collision.gameObject.tag != "Enemy" && !collided)
+        if (collision.gameObject.tag != "Spell" && collision.gameObject.tag != "Enemy" && !collided)
         {
             collided = true;
             Destroy(gameObject);
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("collider with" + collision.gameObject.name);
-            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
 
         //checks for the tag of the collided enemy and damages it according to the enemy weakness and resistence
@@ -82,22 +88,19 @@ public class Spell : MonoBehaviour
             {
                 finalDamage = baseDamage * damageMultiplier;
                 collision.gameObject.GetComponent<EnemyStats>().TakeDamage(finalDamage);
-                Destroy(gameObject);
             }
             //halves the damage
             if (enemyResistence == spellType)
             {
                 finalDamage = baseDamage / damageMultiplier;
                 collision.gameObject.GetComponent<EnemyStats>().TakeDamage(finalDamage);
-                Destroy(gameObject);
-
             }
             //does base damage
             if (enemyResistence != spellType && enemyWeakness != spellType)
             {
                 collision.gameObject.GetComponent<EnemyStats>().TakeDamage(baseDamage);
-                Destroy(gameObject);
             }
+            Destroy(gameObject);
         }
     }
 }

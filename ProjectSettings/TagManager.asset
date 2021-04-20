@@ -15,6 +15,7 @@ TagManager:
   - DamageSource
   - Particles
   - PetraParticle
+  - Spell
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Player
+  - Spell
   - 
   - 
   - 

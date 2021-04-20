@@ -41,6 +41,7 @@ public class Left_Hand_AnimationController : MonoBehaviour
         }
     }
 
+    //changes the emission rate of the particleSystem to give a better visual feedback when the attack is fully charged
     public void ChargeEmissionRate()
     {
         var emission = charge.emission;

@@ -106,9 +106,15 @@ public class PlayerAttack : MonoBehaviour
     {
         if (chargeTime <= 1)
         {
-            ShootProjectile(0);
+            if (leftHand)
+            {
+                ShootProjectile(0);
+            }
+            if (rightHand)
+            {
+                ShootProjectile(3);
+            }
             p_Systems.ConsumeMana(5);
-            //Debug.Log("Weak Attack");
             chargeTime = 0;
             _chargebarSlider.value = chargeTime;
         }
@@ -118,10 +124,15 @@ public class PlayerAttack : MonoBehaviour
     {
         if (chargeTime > 1 && chargeTime < 2)
         {
-            //insert shootprojectile
-            ShootProjectile(0);
+            if (leftHand)
+            {
+                ShootProjectile(1);
+            }
+            if (rightHand)
+            {
+                ShootProjectile(4);
+            }
             p_Systems.ConsumeMana(15);
-            //Debug.Log("Mid Attack");
             chargeTime = 0;
             _chargebarSlider.value = chargeTime;
         }
@@ -131,11 +142,17 @@ public class PlayerAttack : MonoBehaviour
     {
         if (chargeTime >= 2)
         {
+            if (leftHand)
+            {
+                ShootProjectile(2);
+            }
+            if (rightHand)
+            {
+                ShootProjectile(5);
+            }
             p_Systems.ConsumeMana(30);
-            //Debug.Log("Strong Attack");
             chargeTime = 0;
             _chargebarSlider.value = chargeTime;
-            ShootProjectile(0);
         }
     }
     #endregion
@@ -155,13 +172,13 @@ public class PlayerAttack : MonoBehaviour
         // instantiates the correct prefab according to the index
         if (leftHand)
         {
-            InstantiateProjectile(LHFirePoint, 0);
+            InstantiateProjectile(LHFirePoint, index);
             leftHand = false;
         }
         if (rightHand)
         {
             //the value one refers to the projectile index to be spawned
-            InstantiateProjectile(RHFirePoint, 1);
+            InstantiateProjectile(RHFirePoint, index);
             rightHand = false;
         }
     }
