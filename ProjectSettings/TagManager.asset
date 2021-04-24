@@ -16,6 +16,7 @@ TagManager:
   - Particles
   - PetraParticle
   - Spell
+  - Shield
   layers:
   - Default
   - TransparentFX
