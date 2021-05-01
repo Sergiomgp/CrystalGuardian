@@ -24,13 +24,14 @@ public class Spell : MonoBehaviour
     private float damageMultiplier = 2f;
     private float finalDamage;
     [SerializeField] private string spellType;
+    private bool applyDot;
 
     private bool collided;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
-
+        applyDot = false;
         //ignores collisions between the spells and the player
         rb = gameObject.GetComponent<Rigidbody>();
         Physics.IgnoreLayerCollision(0, 9);
@@ -60,6 +61,8 @@ public class Spell : MonoBehaviour
         if (spellChargeTime >= 2)
         {
             baseDamage = 50;
+            applyDot = true;
+
         }
     }
 
@@ -82,6 +85,11 @@ public class Spell : MonoBehaviour
         {
             enemyWeakness = collision.gameObject.GetComponent<EnemyStats>().weakness;
             enemyResistence = collision.gameObject.GetComponent<EnemyStats>().resistence;
+
+            if (applyDot && spellType == "Petra")
+            {
+                collision.gameObject.GetComponent<EnemyStats>().SecondaryEffect(applyDot);
+            }
 
             //doubles the damage
             if (enemyWeakness == spellType)

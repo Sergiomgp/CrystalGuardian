@@ -9667,6 +9667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionExplosion: {fileID: 198426, guid: 14fb4a44e06c7d34a89aa05cbc08d12d, type: 3}
+  secondaryEffect: {fileID: 0}
   baseDamage: 0
   spellType: Petra
 --- !u!135 &-6258162390646145736

@@ -84,7 +84,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 sprintSpeed = speed * speedMultiplier + speed;
                 controller.Move(move * sprintSpeed * Time.deltaTime);
-                Debug.Log("The new speed is " + sprintSpeed);
                 _staminaSlider.value -= 20 * Time.deltaTime;
                 currentStamina = _staminaSlider.value;
 
@@ -95,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
                 regen = StartCoroutine(StaminaRegen());
             }
         }
-        //Debug.Log(currentStamina); logs tue current stamina value
     }
 
     //regens player´s stamina

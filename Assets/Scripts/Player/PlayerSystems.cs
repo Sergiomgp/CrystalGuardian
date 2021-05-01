@@ -73,7 +73,6 @@ public class PlayerSystems : MonoBehaviour
         if (player.currentMana <= 4)
         {
             player.hasMana = false;
-            Debug.Log("not enough mana");
         }
 
         if (player.currentMana > player.playerMana)
@@ -90,7 +89,6 @@ public class PlayerSystems : MonoBehaviour
         {
             player.currentMana -= ammount;
             updateManaUI();
-            Debug.Log("used" + ammount + " mana");
 
             if (regen != null)
             {
@@ -119,7 +117,7 @@ public class PlayerSystems : MonoBehaviour
 
         while(player.currentMana < player.playerMana)
         {
-            player.currentMana += player.playerMana / 100;
+            player.currentMana += player.playerMana / 50;
             updateManaUI();
             yield return regenTick;
         }
@@ -171,16 +169,12 @@ public class PlayerSystems : MonoBehaviour
         if (!player.isShielded && player.isPlayerAlive)
         {
             player.currentHp -= ammount;
-            Debug.Log("Player took" + ammount + " Remaining HP: " + player.currentHp);
             hpBar.value = player.currentHp;
             hp_text.text = player.currentHp.ToString("F0");
 
         }
         //checks if player used shield, if true, player takes no damage
-        if (player.isShielded && player.isPlayerAlive)
-        {
-            Debug.Log("Player is shielded, damage is negated");
-        }
+     
         CheckHP();
     }
 
@@ -189,7 +183,6 @@ public class PlayerSystems : MonoBehaviour
         if (player.currentHp <= 0)
         {
             player.isPlayerAlive = false;
-            Debug.Log("game over");
             //end game
         }
     }

@@ -17,6 +17,7 @@ TagManager:
   - PetraParticle
   - Spell
   - Shield
+  - Fire_Dot
   layers:
   - Default
   - TransparentFX

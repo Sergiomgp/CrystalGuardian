@@ -22,11 +22,11 @@ public class PlayerCollision : MonoBehaviour
         {
             if (_player.isShielded)
             {
-                Debug.Log("Player is shielded no damage taken");
+                return;
             }
             else
             {
-                p_systems.PlayerTakeDamage(10);
+                p_systems.PlayerTakeDamage(5);
             }
         }
     }

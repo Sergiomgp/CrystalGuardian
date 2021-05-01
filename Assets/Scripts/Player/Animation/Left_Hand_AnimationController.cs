@@ -30,14 +30,12 @@ public class Left_Hand_AnimationController : MonoBehaviour
             anim.SetBool("IsPressed", true);
             petraEffect.SetActive(true);
             ChargeEmissionRate();
-            //Debug.Log("LH_SHOOT is now " + LH_shoot.leftHand);
         }
 
         if (!LH_shoot.leftHand)
         {
             anim.SetBool("IsPressed", false);
             petraEffect.SetActive(false);
-            //Debug.Log("LH_SHOOT is now " + LH_shoot.leftHand);
         }
     }
 

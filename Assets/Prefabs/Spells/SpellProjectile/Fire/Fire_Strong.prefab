@@ -14581,6 +14581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionExplosion: {fileID: 136414, guid: 435eceb2bfb386840b659e6e4a8a7209, type: 3}
+  secondaryEffect: {fileID: 187646, guid: 2d37b2389a619f145aa6a6107edf21de, type: 3}
   baseDamage: 0
   spellType: Fire
 --- !u!135 &-7801944693935114553

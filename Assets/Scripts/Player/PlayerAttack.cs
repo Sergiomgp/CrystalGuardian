@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform LHFirePoint, RHFirePoint;
     public Slider _chargebarSlider;
     public float chargeTime;
-    private float shootCooldown = .4f;
+    private float shootCooldown = .6f;
     [SerializeField] private bool onCooldown = false;
 
     public float projectileSpeed = 100f;
@@ -42,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (Input.GetMouseButton(0) && !rightHand && !onCooldown)
             {
-                if (isCharging == true || rightHand == true) { Debug.Log("Already charging"); return; }
+                if (isCharging == true || rightHand == true) { return; }
 
                 isCharging = true;
                 leftHand = true;
@@ -50,7 +50,6 @@ public class PlayerAttack : MonoBehaviour
                 {
                     ChargeAttack();
                 }
-                //Debug.Log("right hand is" + rightHand);
             }
             if (Input.GetMouseButtonUp(0) && !rightHand && !onCooldown)
             {
@@ -62,7 +61,7 @@ public class PlayerAttack : MonoBehaviour
             }
             if (Input.GetMouseButton(1) && !leftHand && !onCooldown)
             {
-                if (isCharging == true || leftHand == true) { Debug.Log("Already charging"); return; }
+                if (isCharging == true || leftHand == true) {  return; }
 
                 isCharging = true;
                 rightHand = true;
@@ -70,7 +69,6 @@ public class PlayerAttack : MonoBehaviour
                 {
                     ChargeAttack();
                 }
-                //Debug.Log("left hand is" + leftHand);
             }
             if (Input.GetMouseButtonUp(1) && !leftHand && !onCooldown)
             {
@@ -94,7 +92,6 @@ public class PlayerAttack : MonoBehaviour
     private void LaunchAttack()
     {
         onCooldown = true;
-        //Debug.Log("PROJECTILY SHOOT");
         WeakAttack();
         MidAttack();
         StrongAttack();
@@ -132,7 +129,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 ShootProjectile(4);
             }
-            p_Systems.ConsumeMana(15);
+            p_Systems.ConsumeMana(10);
             chargeTime = 0;
             _chargebarSlider.value = chargeTime;
         }
@@ -150,7 +147,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 ShootProjectile(5);
             }
-            p_Systems.ConsumeMana(30);
+            p_Systems.ConsumeMana(20);
             chargeTime = 0;
             _chargebarSlider.value = chargeTime;
         }
@@ -177,7 +174,7 @@ public class PlayerAttack : MonoBehaviour
         }
         if (rightHand)
         {
-            //the value one refers to the projectile index to be spawned
+          
             InstantiateProjectile(RHFirePoint, index);
             rightHand = false;
         }

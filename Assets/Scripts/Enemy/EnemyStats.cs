@@ -10,17 +10,24 @@ public class EnemyStats : MonoBehaviour
     public GameObject heathBarUI;
     private GameObject death_particles;
 
+    public float deathDelay;
+    
+
+    Animator enemyAnimations;
+
     public string weakness;
     public string resistence;
     public float maxhealth;
     public float currenthealth;
     public float damage;
 
+    public GameObject prision;
+    public bool imprisioned;
+
     // Start is called before the first frame update
     void Start()
     {
-        //death_particles = GameObject.FindGameObjectWithTag("DeathParticles");
-        //death_particles.SetActive(false);
+        enemyAnimations = GetComponentInChildren<Animator>();
         currenthealth = maxhealth;
         enemyHealthBar.value = CalculateHealth();
     }
@@ -39,9 +46,8 @@ public class EnemyStats : MonoBehaviour
         if (currenthealth <= 0)
         {
             //death_particles.SetActive(true);
-            //dead animation
             //dead soundFX
-            Destroy(gameObject, .5f);
+            Destroy(gameObject, deathDelay);
         }
 
         if (currenthealth > maxhealth)
@@ -58,5 +64,25 @@ public class EnemyStats : MonoBehaviour
     public void TakeDamage(float ammount)
     {
         currenthealth -= ammount;
+        enemyAnimations.SetBool("gotHit", true);
+        enemyAnimations.SetFloat("locomotion", -1f);
+    }
+
+    public void SecondaryEffect(bool dot)
+    {
+        if (dot)
+        {
+            StartCoroutine(Imprision());
+        }
+
+    }
+
+    private IEnumerator Imprision()
+    {
+        imprisioned = true;
+        prision.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        prision.SetActive(false);
+        imprisioned = false;
     }
 }
