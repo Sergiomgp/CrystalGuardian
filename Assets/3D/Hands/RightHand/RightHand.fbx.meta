@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8941a6a4690bb1040bdf8d33caa44fc1
+guid: 4abd927cf0158d046aa2be6120081527
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -51,7 +51,7 @@ ModelImporter:
       takeName: RRight_Hand_Armature|L_Hand_ArmatureAction
       internalID: 0
       firstFrame: 0
-      lastFrame: 20
+      lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

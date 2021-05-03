@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d38bf6adb3d39774bb1750bd08d340b4
+guid: 4c19bd4ecf2bf964cb1176525861b1d1
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -18,19 +18,9 @@ ModelImporter:
   - first:
       74: 2422731829524082961
     second: L_Hand_Armature|PoseLib
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: c6ec49752f82a1e4d89fc6268d404983, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: ImphenziaPalette01-256-Gradient (1)
-    second: {fileID: 2800000, guid: 824f183fe79916d46aad891705ce7083, type: 3}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -47,7 +37,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
