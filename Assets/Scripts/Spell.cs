@@ -35,6 +35,7 @@ public class Spell : MonoBehaviour
         //ignores collisions between the spells and the player
         rb = gameObject.GetComponent<Rigidbody>();
         Physics.IgnoreLayerCollision(0, 9);
+        Physics.IgnoreLayerCollision(0, 11);
     }
     private void Update()
     {

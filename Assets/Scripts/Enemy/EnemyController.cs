@@ -9,10 +9,12 @@ public class EnemyController : MonoBehaviour
     public float lookRadius = 10f;
 
     EnemyStats enemy;
-    Animator enemyAnimations;
+    public Animator enemyAnimations;
 
     Transform target;
     NavMeshAgent agent;
+
+    public bool attacking;
 
     float distanceOffset = .7f;
     // Start is called before the first frame update
@@ -60,14 +62,18 @@ public class EnemyController : MonoBehaviour
 
     private void IdleAnimation()
     {
+        //enemyAnimations.SetBool("attacking", false);
         //idle animation
+        attacking = false;
         enemyAnimations.SetFloat("locomotion", 0);
         enemyAnimations.SetBool("attack1", false);
     }
 
     private void ChaseAnimation()
     {
+        //enemyAnimations.SetBool("attacking", false);
         //chases the target
+        attacking = false;
         agent.isStopped = false;
         enemyAnimations.SetFloat("locomotion", 1f);
         enemyAnimations.SetBool("attack1", false);
@@ -75,10 +81,12 @@ public class EnemyController : MonoBehaviour
 
     private void AttackAnimation()
     {
+        //enemyAnimations.SetBool("attacking", true);
         //attack the target
         agent.isStopped = true;
         enemyAnimations.SetFloat("locomotion", 0f);
         enemyAnimations.SetBool("attack1", true);
+        attacking = true;
     }
 
     private void DeathAnimation()
