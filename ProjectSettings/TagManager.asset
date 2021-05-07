@@ -19,6 +19,9 @@ TagManager:
   - Shield
   - Fire_Dot
   - AttackCollider
+  - Interactable
+  - Interacted
+  - ZoneOneDoor
   layers:
   - Default
   - TransparentFX
@@ -32,9 +35,9 @@ TagManager:
   - Player
   - Spell
   - IgnoreSpell
-  - 
-  - 
-  - 
+  - Walls
+  - Interactable
+  - Interacted
   - 
   - 
   - 

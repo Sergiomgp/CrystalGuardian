@@ -23,7 +23,7 @@ public class Spell : MonoBehaviour
     [SerializeField] private float baseDamage;
     private float damageMultiplier = 2f;
     private float finalDamage;
-    [SerializeField] private string spellType;
+    [SerializeField] public string spellType;
     private bool applyDot;
 
     private bool collided;
@@ -75,7 +75,7 @@ public class Spell : MonoBehaviour
             Instantiate(collisionExplosion, transform.position, Quaternion.identity);
         }
         //checks for collision with other objets that arent enemies
-        if (collision.gameObject.tag != "Spell" && collision.gameObject.tag != "Enemy" && !collided)
+        if (collision.gameObject.tag != "Spell" && collision.gameObject.tag != "Enemy"  && !collided)
         {
             collided = true;
             Destroy(gameObject);
