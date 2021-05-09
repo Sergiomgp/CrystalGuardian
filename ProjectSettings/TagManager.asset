@@ -22,6 +22,7 @@ TagManager:
   - Interactable
   - Interacted
   - ZoneOneDoor
+  - ArrowTrap
   layers:
   - Default
   - TransparentFX
