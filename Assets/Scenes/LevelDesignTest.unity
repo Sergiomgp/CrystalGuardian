@@ -1620,7 +1620,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1980,6 +1980,10 @@ PrefabInstance:
       value: SM_Trap_WallArrow_Hole_01 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_TagString
       value: ArrowTrap
       objectReference: {fileID: 0}
@@ -2035,6 +2039,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 51573320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &51573322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 51573320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &51573323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51573322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 1
 --- !u!1001 &52368315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2573,6 +2597,10 @@ PrefabInstance:
       value: SM_Trap_WallArrow_Hole_01 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_TagString
       value: ArrowTrap
       objectReference: {fileID: 0}
@@ -2628,6 +2656,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 64859588}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &64859590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 64859588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &64859591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64859590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 2
 --- !u!1001 &66107642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2892,6 +2940,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2958,11 +3014,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79671777}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!4 &80607270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 419854, guid: 67f6358a70929f943ae115f8b4bcf075,
@@ -3590,7 +3646,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8764,7 +8820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 272265415}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ArrowColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11645,7 +11701,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13194,6 +13250,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -13260,11 +13324,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435757678}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!1 &436460708
 GameObject:
   m_ObjectHideFlags: 0
@@ -15312,7 +15376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totemsToActivate: 4
-  currentTotemsActivated: 4
+  currentTotemsActivated: 0
 --- !u!1001 &503162842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17518,7 +17582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &579845815
 Transform:
   m_ObjectHideFlags: 0
@@ -17920,6 +17984,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -17986,11 +18058,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597026183}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!4 &602043029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 449052, guid: 939f27c57ef13654eafcf37ff873a454,
@@ -18795,7 +18867,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21783,7 +21855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &771475012
 Transform:
   m_ObjectHideFlags: 0
@@ -23370,6 +23442,10 @@ PrefabInstance:
       value: SM_Trap_WallArrow_Hole_01 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_TagString
       value: ArrowTrap
       objectReference: {fileID: 0}
@@ -23425,6 +23501,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 819497293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &819497295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 819497293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &819497296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819497295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 1
 --- !u!1001 &822739689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30756,6 +30852,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -30822,11 +30926,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117900990}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!1001 &1122105279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31567,6 +31671,10 @@ PrefabInstance:
       value: SM_Trap_WallArrow_Hole_01 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_TagString
       value: ArrowTrap
       objectReference: {fileID: 0}
@@ -31622,6 +31730,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1139214479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1139214481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1139214479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1139214482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139214481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 1
 --- !u!1001 &1143076188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31792,6 +31920,10 @@ PrefabInstance:
       value: SM_Trap_WallArrow_Hole_01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_TagString
       value: ArrowTrap
       objectReference: {fileID: 0}
@@ -31847,6 +31979,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1150615298}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1150615300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1150615298}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1150615301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150615300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 1
 --- !u!4 &1151325346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 404728, guid: 2f502f470bc99cf40a5d520810ab13c3,
@@ -34262,6 +34414,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1236825108}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1236825110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1236825108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1236825111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236825110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 2
 --- !u!1001 &1238279798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36784,6 +36956,10 @@ PrefabInstance:
       value: SM_Trap_WallArrow_Hole_01
       objectReference: {fileID: 0}
     - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_TagString
       value: ArrowTrap
       objectReference: {fileID: 0}
@@ -36833,6 +37009,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+--- !u!1 &1340125931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340125930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1340125932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340125931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 1
 --- !u!1001 &1340871964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37720,6 +37916,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -37786,11 +37990,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366099165}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!4 &1366781062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 449052, guid: 939f27c57ef13654eafcf37ff873a454,
@@ -43525,7 +43729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1548436073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51589,6 +51793,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -51655,11 +51867,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800711669}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!4 &1800813467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 404728, guid: 2f502f470bc99cf40a5d520810ab13c3,
@@ -55290,6 +55502,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -55356,11 +55576,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938296600}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!1001 &1940325123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56738,6 +56958,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Trap_WallArrow_Hole_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_TagString
+      value: ArrowCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 443466, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -56804,11 +57032,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982004584}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.19992371}
-  m_Center: {x: 0.000000007450582, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.32272288, y: 0.32406247, z: 0.39025763}
+  m_Center: {x: 0.000000014901157, y: 0, z: -0.8412394}
 --- !u!1 &1982372470
 GameObject:
   m_ObjectHideFlags: 0
@@ -59589,6 +59817,10 @@ PrefabInstance:
       value: SM_Trap_WallArrow_Hole_01 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a, type: 3}
       propertyPath: m_TagString
       value: ArrowTrap
       objectReference: {fileID: 0}
@@ -59644,6 +59876,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2081933988}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2081933990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128952, guid: 5b290bad62686f54786d6121cfb82c4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2081933988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2081933991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081933990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac36014c334d654ea4833273596b91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 149964, guid: 334e4a6aa2bb2644484c84cfe166fc2f, type: 3}
+  shootDelay: 1
 --- !u!1001 &2083483088
 PrefabInstance:
   m_ObjectHideFlags: 0

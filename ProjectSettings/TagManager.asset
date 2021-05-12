@@ -23,6 +23,7 @@ TagManager:
   - Interacted
   - ZoneOneDoor
   - ArrowTrap
+  - ArrowCollider
   layers:
   - Default
   - TransparentFX
@@ -39,8 +40,8 @@ TagManager:
   - Walls
   - Interactable
   - Interacted
-  - 
-  - 
+  - ArrowCollider
+  - Arrow
   - 
   - 
   - 
