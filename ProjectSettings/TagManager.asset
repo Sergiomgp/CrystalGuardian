@@ -24,6 +24,7 @@ TagManager:
   - ZoneOneDoor
   - ArrowTrap
   - ArrowCollider
+  - FireTotem
   layers:
   - Default
   - TransparentFX

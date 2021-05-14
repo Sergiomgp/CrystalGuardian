@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &197870
+--- !u!1 &2480739575172659713
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 475210}
-  - component: {fileID: 3349116}
-  - component: {fileID: 2311790}
-  - component: {fileID: 64164106274060974}
-  m_Layer: 0
-  m_Name: SM_Prop_Torch_Ornate_01
-  m_TagString: Untagged
+  - component: {fileID: 2480739575172906661}
+  - component: {fileID: 2480739575171605651}
+  - component: {fileID: 2480739575170545793}
+  - component: {fileID: 2480739577039654454}
+  - component: {fileID: 4815101655557821534}
+  m_Layer: 13
+  m_Name: FlameTorch
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &475210
+--- !u!4 &2480739575172906661
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197870}
+  m_GameObject: {fileID: 2480739575172659713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -60.5, y: -4.41, z: 205.85}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
-  - {fileID: 1864057724167867041}
+  - {fileID: 4301831683452253262}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3349116
+--- !u!33 &2480739575171605651
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197870}
+  m_GameObject: {fileID: 2480739575172659713}
   m_Mesh: {fileID: 4300000, guid: 356f80f4413afef40ad0fa02f6ebb8fe, type: 3}
---- !u!23 &2311790
+--- !u!23 &2480739575170545793
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197870}
+  m_GameObject: {fileID: 2480739575172659713}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -81,26 +82,38 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64164106274060974
-MeshCollider:
+--- !u!65 &2480739577039654454
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197870}
+  m_GameObject: {fileID: 2480739575172659713}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43348616055236502, guid: aca1b6f171ce6ff4193d311002e49466, type: 2}
---- !u!1001 &1864057724168261665
+  serializedVersion: 2
+  m_Size: {x: 0.28699303, y: 0.8371875, z: 0.2444458}
+  m_Center: {x: 0.0022630692, y: -0.02527368, z: 0.00020599365}
+--- !u!114 &4815101655557821534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2480739575172659713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db81de0b45128845b94ac7782711b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellToActivate: Fire
+--- !u!1001 &4301831683452645070
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 475210}
+    m_TransformParent: {fileID: 2480739575172906661}
     m_Modifications:
     - target: {fileID: 100000, guid: fabff3cbe4a4be24a90f7b23e155e025, type: 3}
       propertyPath: m_Name
@@ -149,6 +162,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: fabff3cbe4a4be24a90f7b23e155e025, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fabff3cbe4a4be24a90f7b23e155e025, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fabff3cbe4a4be24a90f7b23e155e025, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: fabff3cbe4a4be24a90f7b23e155e025, type: 3}
       propertyPath: SizeModule.enabled
@@ -208,9 +229,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fabff3cbe4a4be24a90f7b23e155e025, type: 3}
---- !u!4 &1864057724167867041 stripped
+--- !u!4 &4301831683452253262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: fabff3cbe4a4be24a90f7b23e155e025,
     type: 3}
-  m_PrefabInstance: {fileID: 1864057724168261665}
+  m_PrefabInstance: {fileID: 4301831683452645070}
   m_PrefabAsset: {fileID: 0}
