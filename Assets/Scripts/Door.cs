@@ -44,6 +44,7 @@ public class Door : MonoBehaviour
 
     private IEnumerator DoUnlockAnim()
     {
+        gameObject.GetComponent<Animator>().SetBool("MonsterKilled", true);
         yield return new WaitForSeconds(0.5f);
         Debug.Log($"Door {name} is fully opened! Let's gooo!");
     }

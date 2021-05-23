@@ -48,8 +48,9 @@ public class EnemyStats : MonoBehaviour
         if (isAlive && currenthealth <= 0)
         {
             isAlive = false;
+            gameObject.GetComponent<Enemy>().Kill();
             //death_particles.SetActive(true);
-            Destroy(gameObject, deathDelay);
+            //Destroy(gameObject, deathDelay);
 
         }
 
