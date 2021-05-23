@@ -25,6 +25,8 @@ TagManager:
   - ArrowTrap
   - ArrowCollider
   - FireTotem
+  - CellDoors
+  - EnemyManager
   layers:
   - Default
   - TransparentFX

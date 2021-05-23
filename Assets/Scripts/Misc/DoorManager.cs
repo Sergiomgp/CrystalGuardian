@@ -6,6 +6,8 @@ public class DoorManager : MonoBehaviour
 {
     public int totemsToActivate;
     public int currentTotemsActivated;
+    public int monstersToOpen;
+    public int currentMonstersKilled;
 
     bool zoneReached;
 
@@ -38,4 +40,6 @@ public class DoorManager : MonoBehaviour
             door.SetBool("Room2", true);
         }
     }
+
+
 }

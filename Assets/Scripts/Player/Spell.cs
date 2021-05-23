@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Spell : MonoBehaviour
 {
-    Rigidbody rb;
+
     //projectile collision script for destroying upon impact with other objects
+    Rigidbody rb;
     PlayerAttack player;
 
     RaycastHit hit;

@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
-
     public Slider enemyHealthBar;
     public GameObject heathBarUI;
     private GameObject death_particles;
 
     public float deathDelay;
-    
+
+    bool isAlive;
+    public int died;
 
     Animator enemyAnimations;
 
@@ -20,6 +21,7 @@ public class EnemyStats : MonoBehaviour
     public float maxhealth;
     public float currenthealth;
     public float damage;
+    public string zone;
 
     public GameObject prision;
     public bool imprisioned;
@@ -27,6 +29,7 @@ public class EnemyStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isAlive = true;
         enemyAnimations = GetComponentInChildren<Animator>();
         currenthealth = maxhealth;
         enemyHealthBar.value = CalculateHealth();
@@ -39,15 +42,15 @@ public class EnemyStats : MonoBehaviour
 
         if (currenthealth < maxhealth)
         {
-
             heathBarUI.SetActive(true);
         }
 
-        if (currenthealth <= 0)
+        if (isAlive && currenthealth <= 0)
         {
+            isAlive = false;
             //death_particles.SetActive(true);
-            //dead soundFX
             Destroy(gameObject, deathDelay);
+
         }
 
         if (currenthealth > maxhealth)
@@ -74,7 +77,6 @@ public class EnemyStats : MonoBehaviour
         {
             StartCoroutine(Imprision());
         }
-
     }
 
     private IEnumerator Imprision()
@@ -85,4 +87,5 @@ public class EnemyStats : MonoBehaviour
         prision.SetActive(false);
         imprisioned = false;
     }
+
 }
