@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ public class Torch : MonoBehaviour
 
     TotemManager _fireTotem;
     // Start is called before the first frame update
+
+    public static event Action<Torch> TorchLitEvent;
+
     void Start()
     {
         fire = GetComponentInChildren<ParticleSystem>();
@@ -28,7 +32,14 @@ public class Torch : MonoBehaviour
                 _fireTotem.currentTorchesLit++;
                 fire.Play();
                 gameObject.tag = "Interacted";
+                Lit();
             }
         }
+    }
+
+    void Lit()
+    {
+        TorchLitEvent?.Invoke(this);
+        Debug.Log("Lit");
     }
 }

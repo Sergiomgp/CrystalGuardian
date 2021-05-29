@@ -6,8 +6,8 @@ public class DoorManager : MonoBehaviour
 {
     public int totemsToActivate;
     public int currentTotemsActivated;
-    public int monstersToOpen;
-    public int currentMonstersKilled;
+    public int torchesToActivate;
+    public int currentTorchesActivated;
 
     bool zoneReached;
 
@@ -33,6 +33,7 @@ public class DoorManager : MonoBehaviour
         }
     }
 
+    //Needs implementing
     void CloseDoors()
     {
         if (zoneReached)
@@ -40,6 +41,4 @@ public class DoorManager : MonoBehaviour
             door.SetBool("Room2", true);
         }
     }
-
-
 }
