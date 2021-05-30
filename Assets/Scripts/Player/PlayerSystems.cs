@@ -19,7 +19,7 @@ public class PlayerSystems : MonoBehaviour
     #endregion
 
     #region SHIELD SYSTEM VARIABLES
-    [SerializeField]private bool onCooldown;
+    [SerializeField] private bool onCooldown;
     private GameObject shield;
     private float cooldownTime = 2f;
     private Coroutine ShieldCD;
@@ -81,7 +81,7 @@ public class PlayerSystems : MonoBehaviour
         }
     }
 
-    
+
     public void ConsumeMana(int ammount)
     {
         ManaCheck();
@@ -115,13 +115,21 @@ public class PlayerSystems : MonoBehaviour
     {
         yield return new WaitForSeconds(manaRegenDelay);
 
-        while(player.currentMana < player.playerMana)
+        while (player.currentMana < player.playerMana)
         {
             player.currentMana += player.playerMana / 50;
             updateManaUI();
             yield return regenTick;
         }
         regen = null;
+    }
+
+
+    public void RestoreMana()
+    {
+        player.currentMana = player.playerMana;
+        updateManaUI();
+
     }
     #endregion
 
@@ -162,19 +170,18 @@ public class PlayerSystems : MonoBehaviour
     #endregion
 
     #region HP SYSTEM METHODS
-    
+
     public void PlayerTakeDamage(float ammount)
     {
-        
+
         if (!player.isShielded && player.isPlayerAlive)
         {
             player.currentHp -= ammount;
-            hpBar.value = player.currentHp;
-            hp_text.text = player.currentHp.ToString("F0");
+            UpdateHealthBarUI();
 
         }
         //checks if player used shield, if true, player takes no damage
-     
+
         CheckHP();
     }
 
@@ -185,6 +192,20 @@ public class PlayerSystems : MonoBehaviour
             player.isPlayerAlive = false;
             //end game
         }
+    }
+
+    public void RestoreHP()
+    {
+        Debug.Log("Player restored " + (player.playerHp - player.currentHp));
+        player.currentHp = player.playerHp;
+        UpdateHealthBarUI();
+
+    }
+
+    void UpdateHealthBarUI()
+    {
+        hpBar.value = player.currentHp;
+        hp_text.text = player.currentHp.ToString("F0");
     }
 
 

@@ -28,6 +28,14 @@ TagManager:
   - CellDoors
   - EnemyManager
   - PreBossDoor
+  - PreBossZone
+  - Room2
+  - SecretPassage
+  - PrisionRoom
+  - TrapSewer
+  - Room_1
+  - Entrance
+  - BossZone
   layers:
   - Default
   - TransparentFX

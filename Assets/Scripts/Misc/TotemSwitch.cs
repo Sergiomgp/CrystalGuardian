@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TotemSwitch : MonoBehaviour
 {
-
+    [SerializeField] GameObject preBossZone;
+    [SerializeField] GameObject BossZone;
     public string weaknessAura;
     private string _type;
 
@@ -13,6 +14,8 @@ public class TotemSwitch : MonoBehaviour
     private void Start()
     {
         aura = GetComponentInChildren<ParticleSystem>();
+        preBossZone.SetActive(false);
+        BossZone.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -25,7 +28,8 @@ public class TotemSwitch : MonoBehaviour
                 gameObject.tag = "Interacted";
                 aura.Stop();
                 GameObject.FindGameObjectWithTag("PreBossDoor").GetComponent<Animator>().SetBool("TotemActivated", true);
-
+                preBossZone.SetActive(true);
+                BossZone.SetActive(true);
             }
         }
     }
