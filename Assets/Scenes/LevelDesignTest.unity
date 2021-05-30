@@ -725,7 +725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164216, guid: c39c4cd0967de674eb0b5c00da3fdccd, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 467916, guid: c39c4cd0967de674eb0b5c00da3fdccd, type: 3}
       propertyPath: m_RootOrder
@@ -19358,6 +19358,7 @@ Transform:
   - {fileID: 594965368}
   - {fileID: 1599505558}
   - {fileID: 1180592898}
+  - {fileID: 502851964}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25849,7 +25850,7 @@ GameObject:
   - component: {fileID: 502851965}
   - component: {fileID: 502851966}
   m_Layer: 14
-  m_Name: Door
+  m_Name: ZoneOneDoor
   m_TagString: ZoneOneDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25862,14 +25863,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502851963}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1683322247}
   - {fileID: 917535507}
-  m_Father: {fileID: 546182017}
-  m_RootOrder: 4
+  m_Father: {fileID: 389880076}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &502851965
 Animator:
@@ -26908,6 +26909,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 529717467}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &531901810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2823623959690448849, guid: 53f6465d7197c164486a7a66859d4304,
+    type: 3}
+  m_PrefabInstance: {fileID: 748871666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &531901811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531901810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f8645eaaf8a38479565cd09ffa2b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrapSewer: {fileID: 1788017184}
+  PrisionRoom: {fileID: 1555386657}
+  SecretPassage: {fileID: 768277630}
+  Room_2: {fileID: 1000572207}
 --- !u!1001 &532783957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27693,7 +27716,6 @@ Transform:
   - {fileID: 1460703910}
   - {fileID: 1864751267}
   - {fileID: 1908684374}
-  - {fileID: 502851964}
   - {fileID: 1480138560}
   m_Father: {fileID: 389880076}
   m_RootOrder: 1
@@ -34747,6 +34769,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 389880076}
     m_Modifications:
+    - target: {fileID: 2823623959690448849, guid: 53f6465d7197c164486a7a66859d4304,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8530553257961853535, guid: 53f6465d7197c164486a7a66859d4304,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53618,8 +53645,8 @@ GameObject:
   - component: {fileID: 1180592898}
   - component: {fileID: 1180592899}
   - component: {fileID: 1180592900}
-  m_Layer: 0
-  m_Name: Door
+  m_Layer: 12
+  m_Name: PreBossDoor
   m_TagString: PreBossDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60837,7 +60864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125656, guid: 7d4b7f62843a70e48ad6f3b8dd9edc48, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 484164, guid: 7d4b7f62843a70e48ad6f3b8dd9edc48, type: 3}
       propertyPath: m_RootOrder
@@ -68141,7 +68168,7 @@ Transform:
   - {fileID: 1909926882}
   - {fileID: 626200065}
   m_Father: {fileID: 546182017}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1480749770
 PrefabInstance:
@@ -102959,7 +102986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 199708, guid: 749ac805017ffb642834e61134421373, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 466356, guid: 749ac805017ffb642834e61134421373, type: 3}
       propertyPath: m_RootOrder
