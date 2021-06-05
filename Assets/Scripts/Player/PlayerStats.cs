@@ -49,4 +49,9 @@ public class PlayerStats : MonoBehaviour
             pSystems.PlayerTakeDamage(20);
         }
     }
+
+    public void PlayerTakeDamage(int ammount)
+    {
+        pSystems.PlayerTakeDamage(ammount);
+    }
 }

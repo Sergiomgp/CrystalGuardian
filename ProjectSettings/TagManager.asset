@@ -36,6 +36,10 @@ TagManager:
   - Room_1
   - Entrance
   - BossZone
+  - Ground
+  - EnemyBlast
+  - EnemyShield
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -54,10 +58,10 @@ TagManager:
   - Interacted
   - ArrowCollider
   - Arrow
-  - 
-  - 
-  - 
-  - 
+  - FakeWalls
+  - Boss
+  - EnemyProjectile
+  - EnemyShield
   - 
   - 
   - 

@@ -14,8 +14,8 @@ public class TotemSwitch : MonoBehaviour
     private void Start()
     {
         aura = GetComponentInChildren<ParticleSystem>();
-        preBossZone.SetActive(false);
-        BossZone.SetActive(false);
+        //preBossZone.SetActive(false);
+        //BossZone.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float distance = Vector3.Distance(target.position, transform.position);
         //checks for the distance between enemy and player when its less the the look radius starts chasing player
         if (distance <= lookRadius)

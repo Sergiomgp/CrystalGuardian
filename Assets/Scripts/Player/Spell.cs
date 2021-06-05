@@ -36,7 +36,8 @@ public class Spell : MonoBehaviour
         //ignores collisions between the spells and the player
         rb = gameObject.GetComponent<Rigidbody>();
         Physics.IgnoreLayerCollision(0, 9);
-        Physics.IgnoreLayerCollision(0, 11);
+        Physics.IgnoreLayerCollision(0, 17);
+
     }
     private void Update()
     {
@@ -111,6 +112,11 @@ public class Spell : MonoBehaviour
                 collision.gameObject.GetComponent<EnemyStats>().TakeDamage(baseDamage);
             }
             Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Boss")
+        {
+            collision.gameObject.GetComponent<BossStats>().TakeDamage(baseDamage);
         }
     }
 }
