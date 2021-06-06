@@ -46,18 +46,16 @@ public class Door : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetBool("MonsterKilled", true);
         yield return new WaitForSeconds(0.5f);
-        Debug.Log($"Door {name} is fully opened! Let's gooo!");
+        //Debug.Log($"Door {name} is fully opened! Let's gooo!");
     }
     
     private void Register()
     {
-        Debug.Log("Registed event");
         Enemy.EnemyDiedEvent += Enemy_OnEnemyDiedEvent;
     }
 
     private void Unregister()
     {
-        Debug.Log("UnRegisted event");
         Enemy.EnemyDiedEvent -= Enemy_OnEnemyDiedEvent;
     }
 }

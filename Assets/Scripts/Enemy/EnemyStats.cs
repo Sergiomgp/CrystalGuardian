@@ -9,6 +9,8 @@ public class EnemyStats : MonoBehaviour
     public GameObject heathBarUI;
     private GameObject death_particles;
 
+    EnemyController controller;
+
     public float deathDelay;
 
     bool isAlive;
@@ -31,6 +33,7 @@ public class EnemyStats : MonoBehaviour
     {
         isAlive = true;
         enemyAnimations = GetComponentInChildren<Animator>();
+        controller = GetComponent<EnemyController>();
         currenthealth = maxhealth;
         enemyHealthBar.value = CalculateHealth();
     }
@@ -50,11 +53,10 @@ public class EnemyStats : MonoBehaviour
             isAlive = false;
             gameObject.GetComponent<Enemy>().Kill();
             //death_particles.SetActive(true);
-            //Destroy(gameObject, deathDelay);
 
         }
 
-        if (currenthealth > maxhealth)
+        if (currenthealth > maxhealth || controller.enemyEngaged == false)
         {
             currenthealth = maxhealth;
         }
@@ -67,14 +69,18 @@ public class EnemyStats : MonoBehaviour
 
     public void TakeDamage(float ammount)
     {
-        currenthealth -= ammount;
-        enemyAnimations.SetBool("gotHit", true);
-        enemyAnimations.SetFloat("locomotion", -1f);
+        if (controller.enemyEngaged == true)
+        {
+            currenthealth -= ammount;
+            enemyAnimations.SetBool("gotHit", true);
+            enemyAnimations.SetFloat("locomotion", -1f);
+        }
+
     }
 
     public void SecondaryEffect(bool dot)
     {
-        if (dot)
+        if (dot && controller.enemyEngaged == true)
         {
             StartCoroutine(Imprision());
         }

@@ -39,6 +39,7 @@ public class EnemyProjectile : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("hitted" + collision.gameObject.tag);
             collision.gameObject.GetComponent<PlayerStats>().PlayerTakeDamage(damage);
             Destroy(gameObject);
         }
@@ -47,6 +48,8 @@ public class EnemyProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Destroy(gameObject, 3f);
     }
 
 }

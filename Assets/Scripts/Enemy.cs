@@ -19,6 +19,6 @@ public class Enemy : MonoBehaviour
     private IEnumerator DoDeathAnim()
     {
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
+        Destroy(gameObject,2f);
     }
 }

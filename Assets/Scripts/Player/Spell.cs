@@ -71,6 +71,7 @@ public class Spell : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Hitted" + collision.gameObject.name);
         //instantiates explosion particles in the position of the collision
         if (Physics.Raycast(rb.transform.position, transform.TransformDirection(Vector3.forward), out hit))
         {

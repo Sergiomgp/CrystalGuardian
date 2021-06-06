@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform LHFirePoint, RHFirePoint;
     public Slider _chargebarSlider;
     public float chargeTime;
-    private float shootCooldown = .6f;
+    private float shootCooldown = .75f;
     [SerializeField] private bool onCooldown = false;
 
     public float projectileSpeed = 100f;

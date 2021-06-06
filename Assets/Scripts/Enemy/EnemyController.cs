@@ -15,11 +15,13 @@ public class EnemyController : MonoBehaviour
     NavMeshAgent agent;
 
     public bool attacking;
+    public bool enemyEngaged;
 
     float distanceOffset = .7f;
     // Start is called before the first frame update
     void Start()
     {
+        enemyEngaged = false;
         enemy = GetComponent<EnemyStats>();
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
@@ -34,6 +36,7 @@ public class EnemyController : MonoBehaviour
         //checks for the distance between enemy and player when its less the the look radius starts chasing player
         if (distance <= lookRadius)
         {
+            enemyEngaged = true;
             agent.isStopped = false;
             agent.SetDestination(target.position);
             ChaseAnimation();
@@ -48,6 +51,7 @@ public class EnemyController : MonoBehaviour
 
         if (distance > lookRadius)
         {
+            enemyEngaged = false;
             IdleAnimation();
             agent.isStopped = true;
         }
@@ -63,8 +67,6 @@ public class EnemyController : MonoBehaviour
 
     private void IdleAnimation()
     {
-        //enemyAnimations.SetBool("attacking", false);
-        //idle animation
         attacking = false;
         enemyAnimations.SetFloat("locomotion", 0);
         enemyAnimations.SetBool("attack1", false);
@@ -72,8 +74,6 @@ public class EnemyController : MonoBehaviour
 
     private void ChaseAnimation()
     {
-        //enemyAnimations.SetBool("attacking", false);
-        //chases the target
         attacking = false;
         agent.isStopped = false;
         enemyAnimations.SetFloat("locomotion", 1f);
@@ -82,8 +82,6 @@ public class EnemyController : MonoBehaviour
 
     private void AttackAnimation()
     {
-        //enemyAnimations.SetBool("attacking", true);
-        //attack the target
         agent.isStopped = true;
         enemyAnimations.SetFloat("locomotion", 0f);
         enemyAnimations.SetBool("attack1", true);
@@ -96,6 +94,7 @@ public class EnemyController : MonoBehaviour
         {
             enemyAnimations.SetBool("death", true);
             agent.isStopped = true;
+            agent.enabled = false;
         }
     }
 

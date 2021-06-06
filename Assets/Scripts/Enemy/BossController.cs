@@ -8,7 +8,6 @@ public class BossController : MonoBehaviour
     [SerializeField] GameObject ChargeBall;
     [SerializeField] GameObject Projectile;
     [SerializeField] GameObject Shield;
-    float projectileSpeed = 10f;
     public float lookRadius = 10f;
 
     BossStats boss;
@@ -63,7 +62,6 @@ public class BossController : MonoBehaviour
 
             if (distance > lookRadius)
             {
-                Debug.Log("idle");
                 IdleAnimation();
             }
         }
@@ -95,7 +93,6 @@ public class BossController : MonoBehaviour
         {
             agent.isStopped = true;
             agent.enabled = false;
-            Debug.Log("Started Flying");
             AirPhase = true;
             enemyAnimations.SetTrigger("idleTakeoff");
 

@@ -14,7 +14,7 @@ public class PlayerSystems : MonoBehaviour
     public Text manaText;
     // SYSTEM RELATED VARIABLES
     private float manaRegenDelay = 2f;
-    private WaitForSeconds regenTick = new WaitForSeconds(1f);
+    private WaitForSeconds regenTick = new WaitForSeconds(1.5f);
     private Coroutine regen;
     #endregion
 
@@ -65,12 +65,12 @@ public class PlayerSystems : MonoBehaviour
     #region MANA SYSTEM METHODS
     void ManaCheck()
     {
-        if (player.currentMana > 5)
+        if (player.currentMana > 6f)
         {
             player.hasMana = true;
         }
 
-        if (player.currentMana <= 4)
+        if (player.currentMana < 5f)
         {
             player.hasMana = false;
         }
@@ -78,6 +78,7 @@ public class PlayerSystems : MonoBehaviour
         if (player.currentMana > player.playerMana)
         {
             player.currentMana = player.playerMana;
+            updateManaUI();
         }
     }
 
@@ -117,7 +118,7 @@ public class PlayerSystems : MonoBehaviour
 
         while (player.currentMana < player.playerMana)
         {
-            player.currentMana += player.playerMana / 50;
+            player.currentMana += player.playerMana / 75;
             updateManaUI();
             yield return regenTick;
         }

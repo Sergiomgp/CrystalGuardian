@@ -44,9 +44,6 @@ public class BossStats : MonoBehaviour
             isAlive = false;
             enemyAnimations.SetTrigger("flyDeathStart");
             DeathAnimation();
-            //death_particles.SetActive(true);
-            //Destroy(gameObject, deathDelay);
-
         }
 
         if (currenthealth > maxhealth)
