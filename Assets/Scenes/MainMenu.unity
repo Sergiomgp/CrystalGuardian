@@ -225,6 +225,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1053456046}
+        m_MethodName: HowTo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &52347086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +529,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 584987739}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1053456044}
         m_MethodName: SetActive
         m_Mode: 6
@@ -529,8 +551,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 584987739}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1053456047}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -721,6 +743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1053456045}
   - component: {fileID: 1053456046}
+  - component: {fileID: 1053456047}
   m_Layer: 0
   m_Name: Menu_btns
   m_TagString: Untagged
@@ -757,6 +780,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e0ad2ec0d99204e8d08de8f1baee71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1053456047
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053456044}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b84e89b02820ebc4eb47c4c3008ceab6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1068057603
 GameObject:
   m_ObjectHideFlags: 0
