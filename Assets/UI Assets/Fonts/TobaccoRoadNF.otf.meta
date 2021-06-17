@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f8cef2de8077f38469ca90ee0fbc492b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Tobacco Road NF
+  fontNames:
+  - Tobacco Road NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a4253277b5ae1154b9b913a89178d253, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

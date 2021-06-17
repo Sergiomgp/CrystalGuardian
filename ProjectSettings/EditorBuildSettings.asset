@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LevelDesignTest.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: 02268905af79cf548b189edecec7c8ed
+  - enabled: 1
+    path: Assets/Scenes/WindTemple.unity
     guid: a02247f2af992d2418d4858f653a6689
   m_configObjects: {}
