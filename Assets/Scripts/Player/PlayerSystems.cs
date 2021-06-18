@@ -188,9 +188,10 @@ public class PlayerSystems : MonoBehaviour
 
     void CheckHP()
     {
-        if (player.currentHp <= 0)
+        if (player.currentHp <= 0 && PauseMenu.isGameOver == false)
         {
             player.isPlayerAlive = false;
+            PauseMenu.isGameOver = true;
             //end game
         }
     }

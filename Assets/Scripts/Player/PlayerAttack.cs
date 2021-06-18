@@ -42,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         isCharging = false;
-        if (PauseMenu.isPaused == false)
+        if (PauseMenu.isPaused == false && PauseMenu.isGameOver == false)
         {
             if (player.hasMana)
             {

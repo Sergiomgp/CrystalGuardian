@@ -6,30 +6,43 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
+    public static bool isGameOver = false;
 
     public GameObject menuUI;
     public GameObject HUD;
-
+    public GameObject GameOverMenu;
+    public GameObject background;
 
     private void Start()
     {
+        background.SetActive(true);
         isPaused = false;
         HUD.SetActive(true);
         menuUI.SetActive(false);
+        Invoke("DisableBackground", 2f);
+
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (isGameOver == false)
         {
-            if (isPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
+                if (isPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
-            else
-            {
-                Pause();
-            }
+        }
+
+        if (isGameOver)
+        {
+            GameOverUI();
         }
     }
 
@@ -57,8 +70,8 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
         isPaused = true;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -66,5 +79,29 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("leaving");
         Application.Quit();
+    }
+
+    public void RestartGame()
+    {
+        HUD.SetActive(true);
+        isPaused = false;
+        isGameOver = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameOverUI()
+    {
+        HUD.SetActive(false);
+        menuUI.SetActive(false);
+        GameOverMenu.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0f;
+    }
+
+    void DisableBackground()
+    {
+        background.SetActive(false);
     }
 }
