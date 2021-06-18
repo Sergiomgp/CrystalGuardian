@@ -20,6 +20,15 @@ public class PlayerLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseMenu.isPaused == false)
+        {
+            MouseMovement();
+        }
+
+    }
+
+    private void MouseMovement()
+    {
         //gets the input of the mouse movement and moves it accordingly
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

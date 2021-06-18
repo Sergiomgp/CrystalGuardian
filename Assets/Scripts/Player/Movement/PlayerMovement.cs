@@ -33,10 +33,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GroundCheck();
-        Vector3 move = Movement();
-        Sprint(move);
-        Jump();
+        if (PauseMenu.isPaused == false)
+        {
+            GroundCheck();
+            Vector3 move = Movement();
+            Sprint(move);
+            Jump();
+        }
     }
 
     private Vector3 Movement()

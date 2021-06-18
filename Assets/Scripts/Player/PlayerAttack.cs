@@ -42,47 +42,51 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         isCharging = false;
-        if (player.hasMana)
+        if (PauseMenu.isPaused == false)
         {
-            if (Input.GetMouseButton(0) && !rightHand && !onCooldown)
+            if (player.hasMana)
             {
-                if (isCharging == true || rightHand == true) { return; }
+                if (Input.GetMouseButton(0) && !rightHand && !onCooldown)
+                {
+                    if (isCharging == true || rightHand == true) { return; }
 
-                isCharging = true;
-                leftHand = true;
-                if (leftHand)
-                {
-                    ChargeAttack();
+                    isCharging = true;
+                    leftHand = true;
+                    if (leftHand)
+                    {
+                        ChargeAttack();
+                    }
                 }
-            }
-            if (Input.GetMouseButtonUp(0) && !rightHand && !onCooldown)
-            {
-                if (leftHand)
+                if (Input.GetMouseButtonUp(0) && !rightHand && !onCooldown)
                 {
-                    LaunchAttack();
-                    leftHand = false;
+                    if (leftHand)
+                    {
+                        LaunchAttack();
+                        leftHand = false;
+                    }
                 }
-            }
-            if (Input.GetMouseButton(1) && !leftHand && !onCooldown)
-            {
-                if (isCharging == true || leftHand == true) {  return; }
+                if (Input.GetMouseButton(1) && !leftHand && !onCooldown)
+                {
+                    if (isCharging == true || leftHand == true) { return; }
 
-                isCharging = true;
-                rightHand = true;
-                if (rightHand)
-                {
-                    ChargeAttack();
+                    isCharging = true;
+                    rightHand = true;
+                    if (rightHand)
+                    {
+                        ChargeAttack();
+                    }
                 }
-            }
-            if (Input.GetMouseButtonUp(1) && !leftHand && !onCooldown)
-            {
-                if (rightHand)
+                if (Input.GetMouseButtonUp(1) && !leftHand && !onCooldown)
                 {
-                    LaunchAttack();
-                    rightHand = false;
+                    if (rightHand)
+                    {
+                        LaunchAttack();
+                        rightHand = false;
+                    }
                 }
             }
         }
+
     }
 
     #region Charge Attack 
