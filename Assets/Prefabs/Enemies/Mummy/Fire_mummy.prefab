@@ -2016,6 +2016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealthBar: {fileID: 5464788417387821998}
   healthBarUI: {fileID: 5464788417809513865}
+  hpfill: {fileID: 5464788416867342220}
+  hpbackground: {fileID: 5464788418313789662}
   deathDelay: 3
   died: 0
   weakness: Fire

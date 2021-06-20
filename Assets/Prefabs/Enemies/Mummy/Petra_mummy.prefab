@@ -930,6 +930,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealthBar: {fileID: 9094767245181903015}
   healthBarUI: {fileID: 9094767246806967936}
+  hpfill: {fileID: 9094767245870042245}
+  hpbackground: {fileID: 9094767246638463959}
   deathDelay: 3
   died: 0
   weakness: Petra

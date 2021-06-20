@@ -7,6 +7,7 @@ public class BossStats : MonoBehaviour
 {
     public Slider enemyHealthBar;
     public GameObject heathBarUI;
+    public GameObject bar;
 
     public float deathDelay;
 
@@ -35,7 +36,9 @@ public class BossStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         enemyHealthBar.value = CalculateHealth();
+        EnableUI();
 
         if (currenthealth < maxhealth)
         {
@@ -73,5 +76,13 @@ public class BossStats : MonoBehaviour
     public void DeathAnimation()
     {
         enemyAnimations.SetTrigger("flyDeathEnd");
+    }
+
+    void EnableUI()
+    {
+        if (boss.BossEngaged)
+        {
+            bar.SetActive(true);
+        }
     }
 }

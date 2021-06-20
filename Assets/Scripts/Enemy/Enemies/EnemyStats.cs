@@ -8,6 +8,8 @@ public class EnemyStats : MonoBehaviour
     public Slider enemyHealthBar;
     public GameObject healthBarUI;
     private GameObject death_particles;
+    public GameObject hpfill;
+    public GameObject hpbackground;
 
     EnemyController controller;
 
@@ -42,6 +44,7 @@ public class EnemyStats : MonoBehaviour
     void Update()
     {
         enemyHealthBar.value = CalculateHealth();
+        ShowEnemyUI();
 
         if (currenthealth < maxhealth)
         {
@@ -57,6 +60,7 @@ public class EnemyStats : MonoBehaviour
         if (currenthealth > maxhealth || controller.enemyEngaged == false)
         {
             currenthealth = maxhealth;
+
         }
     }
 
@@ -69,12 +73,27 @@ public class EnemyStats : MonoBehaviour
     {
         if (controller.enemyEngaged == true)
         {
-            healthBarUI.SetActive(true);
+
+            hpfill.SetActive(true);
             currenthealth -= ammount;
             enemyAnimations.SetBool("gotHit", true);
             enemyAnimations.SetFloat("locomotion", -1f);
         }
 
+    }
+
+    void ShowEnemyUI()
+    {
+        if (controller.enemyEngaged)
+        {
+            hpfill.SetActive(true);
+            hpbackground.SetActive(true);
+        }
+        else if (controller.enemyEngaged == false)
+        {
+            hpfill.SetActive(false);
+            hpbackground.SetActive(false);
+        }
     }
 
     public void SecondaryEffect(bool dot)
