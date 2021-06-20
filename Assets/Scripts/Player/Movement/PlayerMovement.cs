@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PauseMenu.isPaused == false)
+        if (PauseMenu.isPaused == false && DisableComponent.Cutscene == false)
         {
             GroundCheck();
             Vector3 move = Movement();

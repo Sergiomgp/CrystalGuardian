@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     {
         background.SetActive(true);
         isPaused = false;
-        HUD.SetActive(true);
+        //HUD.SetActive(true);
         menuUI.SetActive(false);
         Invoke("DisableBackground", 2f);
 
@@ -32,6 +32,10 @@ public class PauseMenu : MonoBehaviour
                 if (isPaused)
                 {
                     Resume();
+                }
+                else if (DisableComponent.Cutscene == true)
+                {
+                    CutScenePause();
                 }
                 else
                 {
@@ -59,6 +63,16 @@ public class PauseMenu : MonoBehaviour
     }
 
     void Pause()
+    {
+        HUD.SetActive(false);
+        menuUI.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    void CutScenePause()
     {
         HUD.SetActive(false);
         menuUI.SetActive(true);

@@ -18,13 +18,10 @@ public class PlayerAttack : MonoBehaviour
 
     public float projectileSpeed = 100f;
 
-    Vector3 lh_offset, rh_offset;
-
     [SerializeField] public bool leftHand = false;
     [SerializeField] public bool rightHand = false;
     [SerializeField] public bool isCharging = false;
 
-    //test variables
     public float newChargeTime;
 
 
@@ -33,8 +30,6 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        //rh_offset = new Vector3(.5f, -.4f, 0);
-        //lh_offset = new Vector3(-.5f, -.4f, 0);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>(); 
         p_Systems = GameObject.FindGameObjectWithTag("GameSystems").GetComponent<PlayerSystems>();
     }
@@ -42,7 +37,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         isCharging = false;
-        if (PauseMenu.isPaused == false && PauseMenu.isGameOver == false)
+        if (PauseMenu.isPaused == false && PauseMenu.isGameOver == false && DisableComponent.Cutscene == false)
         {
             if (player.hasMana)
             {
