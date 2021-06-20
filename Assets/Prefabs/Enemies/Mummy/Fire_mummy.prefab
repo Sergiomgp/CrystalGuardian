@@ -2015,13 +2015,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealthBar: {fileID: 5464788417387821998}
-  heathBarUI: {fileID: 5464788417809513865}
+  healthBarUI: {fileID: 5464788417809513865}
   deathDelay: 3
+  died: 0
   weakness: Fire
   resistence: Petra
   maxhealth: 250
   currenthealth: 0
   damage: 10
+  zone: 
   prision: {fileID: 3769473383394309269}
   imprisioned: 0
 --- !u!114 &5464788416979852456
@@ -2039,6 +2041,7 @@ MonoBehaviour:
   lookRadius: 12
   enemyAnimations: {fileID: 0}
   attacking: 0
+  enemyEngaged: 0
 --- !u!1 &6047183399317269420
 GameObject:
   m_ObjectHideFlags: 0

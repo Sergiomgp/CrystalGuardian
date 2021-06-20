@@ -1428,13 +1428,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealthBar: {fileID: 6267497756523189990}
-  heathBarUI: {fileID: 6267497756105560257}
+  healthBarUI: {fileID: 6267497756105560257}
   deathDelay: 3
+  died: 0
   weakness: Water
   resistence: Petra
   maxhealth: 125
   currenthealth: 0
   damage: 20
+  zone: 
   prision: {fileID: 2982412158220851677}
   imprisioned: 0
 --- !u!114 &6267497757222531552
@@ -1452,6 +1454,7 @@ MonoBehaviour:
   lookRadius: 15
   enemyAnimations: {fileID: 0}
   attacking: 0
+  enemyEngaged: 0
 --- !u!1 &5676678887761725156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6267497756523189985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2804,7 +2807,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyStats : MonoBehaviour
 {
     public Slider enemyHealthBar;
-    public GameObject heathBarUI;
+    public GameObject healthBarUI;
     private GameObject death_particles;
 
     EnemyController controller;
@@ -45,7 +45,7 @@ public class EnemyStats : MonoBehaviour
 
         if (currenthealth < maxhealth)
         {
-            heathBarUI.SetActive(true);
+            healthBarUI.SetActive(true);
         }
 
         if (isAlive && currenthealth <= 0)
@@ -69,6 +69,7 @@ public class EnemyStats : MonoBehaviour
     {
         if (controller.enemyEngaged == true)
         {
+            healthBarUI.SetActive(true);
             currenthealth -= ammount;
             enemyAnimations.SetBool("gotHit", true);
             enemyAnimations.SetFloat("locomotion", -1f);
