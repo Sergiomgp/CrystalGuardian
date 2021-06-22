@@ -76,6 +76,8 @@ public class BossController : MonoBehaviour
 
     private void Dead()
     {
+        BossStats.bossAlive = false;
+        Debug.Log(BossStats.bossAlive);
         BossEngaged = false;
         AirPhase = false;
         AirPhaseComplete = true;

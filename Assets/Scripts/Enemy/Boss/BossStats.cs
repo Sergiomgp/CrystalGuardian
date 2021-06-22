@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BossStats : MonoBehaviour
 {
+    public GameObject DeathCutscene;
     public Slider enemyHealthBar;
     public GameObject heathBarUI;
     public GameObject bar;
@@ -12,7 +13,7 @@ public class BossStats : MonoBehaviour
     public float deathDelay;
 
     public bool isAlive;
-
+    public static bool bossAlive;
     Animator enemyAnimations;
 
     BossController boss;
@@ -48,14 +49,22 @@ public class BossStats : MonoBehaviour
         if (isAlive && currenthealth <= 0)
         {
             isAlive = false;
-            enemyAnimations.SetTrigger("flyDeathStart");
-            DeathAnimation();
+            bossAlive = isAlive;
+            Debug.Log(bossAlive);
+            //enemyAnimations.SetTrigger("flyDeathStart");
+            //DeathAnimation();
         }
 
         if (currenthealth > maxhealth)
         {
             currenthealth = maxhealth;
         }
+
+        if (!isAlive)
+        {
+            StartCoroutine(StartCutscene());
+        }
+        
     }
 
     float CalculateHealth()
@@ -84,5 +93,20 @@ public class BossStats : MonoBehaviour
         {
             bar.SetActive(true);
         }
+    }
+
+    void StartDeathCutscene()
+    {
+        if (!isAlive)
+        {
+            bar.SetActive(false);
+            DeathCutscene.SetActive(true);
+        }
+    }
+
+    IEnumerator StartCutscene()
+    {
+        yield return new WaitForSeconds(.1f);
+        StartDeathCutscene();
     }
 }
