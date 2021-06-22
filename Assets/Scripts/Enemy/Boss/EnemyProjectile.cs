@@ -49,6 +49,11 @@ public class EnemyProjectile : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.tag == "Spell")
+        {
+            Destroy(gameObject);
+        }
+
         Destroy(gameObject, 3f);
     }
 

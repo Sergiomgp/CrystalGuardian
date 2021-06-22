@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WindTemple.unity
     guid: a02247f2af992d2418d4858f653a6689
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: 8ef52b4ae25069b4892739fe20d52651
   m_configObjects: {}

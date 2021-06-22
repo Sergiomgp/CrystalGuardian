@@ -7,6 +7,9 @@ public class PlayerSystems : MonoBehaviour
 {
     PlayerStats player;
 
+    public GameObject lHand;
+    public GameObject rHand;
+
 
     #region MANA SYSTEM VARIABLES
     //UI STUFF
@@ -191,6 +194,8 @@ public class PlayerSystems : MonoBehaviour
         if (player.currentHp <= 0 && PauseMenu.isGameOver == false)
         {
             player.isPlayerAlive = false;
+            lHand.SetActive(false);
+            rHand.SetActive(false);
             PauseMenu.isGameOver = true;
             //end game
         }

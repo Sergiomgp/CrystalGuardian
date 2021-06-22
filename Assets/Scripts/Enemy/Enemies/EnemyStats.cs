@@ -71,7 +71,7 @@ public class EnemyStats : MonoBehaviour
 
     public void TakeDamage(float ammount)
     {
-        if (controller.enemyEngaged == true)
+        if (controller.enemyEngaged == true && isAlive)
         {
 
             hpfill.SetActive(true);

@@ -9,6 +9,7 @@ public class BossStats : MonoBehaviour
     public Slider enemyHealthBar;
     public GameObject heathBarUI;
     public GameObject bar;
+    public GameObject playerHud;
 
     public float deathDelay;
 
@@ -100,6 +101,7 @@ public class BossStats : MonoBehaviour
         if (!isAlive)
         {
             bar.SetActive(false);
+            playerHud.SetActive(false);
             DeathCutscene.SetActive(true);
         }
     }

@@ -29,12 +29,6 @@ public class PlayerStats : MonoBehaviour
         pSystems = GameObject.FindGameObjectWithTag("GameSystems").GetComponent<PlayerSystems>();
     }
 
-
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
