@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    AudioSource audioSource;
+
+    public AudioClip GotHit, Attack, Dead;
 
     public float lookRadius = 10f;
 
@@ -21,6 +24,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         enemyEngaged = false;
         enemy = GetComponent<EnemyStats>();
         target = PlayerManager.instance.player.transform;
@@ -111,4 +115,20 @@ public class EnemyController : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
+
+    void PlayATKSfx()
+    {
+        audioSource.PlayOneShot(Attack, 0.6f);
+    }
+
+    void PlayDeathSfx()
+    {
+        audioSource.PlayOneShot(Dead, 0.6f);
+    }
+
+    void PlayGotHitSfx()
+    {
+        audioSource.PlayOneShot(GotHit, 0.6f);
+    }
+
 }

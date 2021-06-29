@@ -11,6 +11,8 @@ public class DoorManager : MonoBehaviour
 
     bool zoneReached;
 
+    bool opened;
+
     Animator door;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class DoorManager : MonoBehaviour
     {
         if (currentTotemsActivated == totemsToActivate)
         {
+            
             door.SetBool("NumberOfTotemsReached", true);
         }
     }

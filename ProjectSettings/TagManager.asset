@@ -40,6 +40,9 @@ TagManager:
   - EnemyBlast
   - EnemyShield
   - Boss
+  - WaterTiles
+  - DirtTiles
+  - PlaneTile
   layers:
   - Default
   - TransparentFX

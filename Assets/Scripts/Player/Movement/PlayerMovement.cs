@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public AudioSource audioSource;
+    public AudioClip dirtFootsteps, waterFootsteps, tileFootsteps;
+
     //Basic player controller script
     public CharacterController controller;
     public Transform groundCheck;
@@ -27,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         currentStamina = _staminaSlider.maxValue;
     }
 
@@ -51,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+
         return move;
     }
 
@@ -113,5 +119,34 @@ public class PlayerMovement : MonoBehaviour
             yield return regenTick;
         }
         regen = null;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (DisableComponent.Cutscene == false)
+        {
+            if (other.gameObject.tag == "WaterTiles")
+            {
+                Debug.Log("water");
+                PlaySoundEffect(waterFootsteps);
+            }
+
+            if (other.gameObject.tag == "DirtTiles" || other.gameObject.tag == "Ground")
+            {
+
+                PlaySoundEffect(dirtFootsteps);
+            }
+            if (other.gameObject.tag == "PlaneTile")
+            {
+                Debug.Log("tile");
+                PlaySoundEffect(tileFootsteps);
+            }
+        }
+
+    }
+
+    void PlaySoundEffect(AudioClip soundQueue)
+    {
+        audioSource.PlayOneShot(soundQueue, 0.6f);
     }
 }

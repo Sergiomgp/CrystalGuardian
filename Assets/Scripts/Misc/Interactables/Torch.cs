@@ -9,6 +9,9 @@ public class Torch : MonoBehaviour
     private string _type;
     ParticleSystem fire;
 
+    AudioSource audioSource;
+    public AudioClip sfx;
+
     TotemManager _fireTotem;
     // Start is called before the first frame update
 
@@ -16,6 +19,7 @@ public class Torch : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         fire = GetComponentInChildren<ParticleSystem>();
         _fireTotem = GameObject.FindGameObjectWithTag("FireTotem").GetComponent<TotemManager>();
     }
@@ -39,7 +43,9 @@ public class Torch : MonoBehaviour
 
     void Lit()
     {
+        audioSource.PlayOneShot(sfx, 0.7f);
         TorchLitEvent?.Invoke(this);
-        Debug.Log("Lit");
+
+        
     }
 }

@@ -1,164 +1,470 @@
 fileFormatVersion: 2
 guid: 4121286b819fe40b689df7a24bba80be
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Head
-    100002: Hips
-    100004: LeftArm
-    100006: LeftFoot
-    100008: LeftForeArm
-    100010: LeftHand
-    100012: LeftHandIndex1
-    100014: LeftHandIndex2
-    100016: LeftHandIndex3
-    100018: LeftHandIndex4
-    100020: LeftHandMiddle1
-    100022: LeftHandMiddle2
-    100024: LeftHandMiddle3
-    100026: LeftHandMiddle4
-    100028: LeftHandPinky1
-    100030: LeftHandPinky2
-    100032: LeftHandPinky3
-    100034: LeftHandPinky4
-    100036: LeftHandRing1
-    100038: LeftHandRing2
-    100040: LeftHandRing3
-    100042: LeftHandRing4
-    100044: LeftHandThumb1
-    100046: LeftHandThumb2
-    100048: LeftHandThumb3
-    100050: LeftHandThumb4
-    100052: LeftLeg
-    100054: LeftShoulder
-    100056: LeftToeBase
-    100058: LeftUpLeg
-    100060: //RootNode
-    100062: Mummy_LP
-    100064: Mummy_LP 1
-    100066: Mummy_Wraps_LP
-    100068: Neck
-    100070: RightArm
-    100072: RightFoot
-    100074: RightForeArm
-    100076: RightHand
-    100078: RightHandIndex1
-    100080: RightHandIndex2
-    100082: RightHandIndex3
-    100084: RightHandIndex4
-    100086: RightHandMiddle1
-    100088: RightHandMiddle2
-    100090: RightHandMiddle3
-    100092: RightHandMiddle4
-    100094: RightHandPinky1
-    100096: RightHandPinky2
-    100098: RightHandPinky3
-    100100: RightHandPinky4
-    100102: RightHandRing1
-    100104: RightHandRing2
-    100106: RightHandRing3
-    100108: RightHandRing4
-    100110: RightHandThumb1
-    100112: RightHandThumb2
-    100114: RightHandThumb3
-    100116: RightHandThumb4
-    100118: RightLeg
-    100120: RightShoulder
-    100122: RightToeBase
-    100124: RightUpLeg
-    100126: Spine
-    100128: Spine1
-    100130: Spine2
-    400000: Head
-    400002: Hips
-    400004: LeftArm
-    400006: LeftFoot
-    400008: LeftForeArm
-    400010: LeftHand
-    400012: LeftHandIndex1
-    400014: LeftHandIndex2
-    400016: LeftHandIndex3
-    400018: LeftHandIndex4
-    400020: LeftHandMiddle1
-    400022: LeftHandMiddle2
-    400024: LeftHandMiddle3
-    400026: LeftHandMiddle4
-    400028: LeftHandPinky1
-    400030: LeftHandPinky2
-    400032: LeftHandPinky3
-    400034: LeftHandPinky4
-    400036: LeftHandRing1
-    400038: LeftHandRing2
-    400040: LeftHandRing3
-    400042: LeftHandRing4
-    400044: LeftHandThumb1
-    400046: LeftHandThumb2
-    400048: LeftHandThumb3
-    400050: LeftHandThumb4
-    400052: LeftLeg
-    400054: LeftShoulder
-    400056: LeftToeBase
-    400058: LeftUpLeg
-    400060: //RootNode
-    400062: Mummy_LP
-    400064: Mummy_LP 1
-    400066: Mummy_Wraps_LP
-    400068: Neck
-    400070: RightArm
-    400072: RightFoot
-    400074: RightForeArm
-    400076: RightHand
-    400078: RightHandIndex1
-    400080: RightHandIndex2
-    400082: RightHandIndex3
-    400084: RightHandIndex4
-    400086: RightHandMiddle1
-    400088: RightHandMiddle2
-    400090: RightHandMiddle3
-    400092: RightHandMiddle4
-    400094: RightHandPinky1
-    400096: RightHandPinky2
-    400098: RightHandPinky3
-    400100: RightHandPinky4
-    400102: RightHandRing1
-    400104: RightHandRing2
-    400106: RightHandRing3
-    400108: RightHandRing4
-    400110: RightHandThumb1
-    400112: RightHandThumb2
-    400114: RightHandThumb3
-    400116: RightHandThumb4
-    400118: RightLeg
-    400120: RightShoulder
-    400122: RightToeBase
-    400124: RightUpLeg
-    400126: Spine
-    400128: Spine1
-    400130: Spine2
-    2100000: Mummy_mat
-    4300000: Mummy_LP
-    4300002: Mummy_Wraps_LP
-    7400000: idle
-    7400002: idleBreak
-    7400004: taunt
-    7400006: walk
-    7400008: walkBackward
-    7400010: dodge
-    7400012: gotHit
-    7400014: death
-    7400016: attack1
-    7400018: attack2
-    7400020: cast
-    7400022: openStanding
-    7400024: openLaying
-    7400026: staticStanding
-    7400028: staticLaying
-    9500000: //RootNode
-    13700000: Mummy_LP 1
-    13700002: Mummy_Wraps_LP
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Head
+  - first:
+      1: 100002
+    second: Hips
+  - first:
+      1: 100004
+    second: LeftArm
+  - first:
+      1: 100006
+    second: LeftFoot
+  - first:
+      1: 100008
+    second: LeftForeArm
+  - first:
+      1: 100010
+    second: LeftHand
+  - first:
+      1: 100012
+    second: LeftHandIndex1
+  - first:
+      1: 100014
+    second: LeftHandIndex2
+  - first:
+      1: 100016
+    second: LeftHandIndex3
+  - first:
+      1: 100018
+    second: LeftHandIndex4
+  - first:
+      1: 100020
+    second: LeftHandMiddle1
+  - first:
+      1: 100022
+    second: LeftHandMiddle2
+  - first:
+      1: 100024
+    second: LeftHandMiddle3
+  - first:
+      1: 100026
+    second: LeftHandMiddle4
+  - first:
+      1: 100028
+    second: LeftHandPinky1
+  - first:
+      1: 100030
+    second: LeftHandPinky2
+  - first:
+      1: 100032
+    second: LeftHandPinky3
+  - first:
+      1: 100034
+    second: LeftHandPinky4
+  - first:
+      1: 100036
+    second: LeftHandRing1
+  - first:
+      1: 100038
+    second: LeftHandRing2
+  - first:
+      1: 100040
+    second: LeftHandRing3
+  - first:
+      1: 100042
+    second: LeftHandRing4
+  - first:
+      1: 100044
+    second: LeftHandThumb1
+  - first:
+      1: 100046
+    second: LeftHandThumb2
+  - first:
+      1: 100048
+    second: LeftHandThumb3
+  - first:
+      1: 100050
+    second: LeftHandThumb4
+  - first:
+      1: 100052
+    second: LeftLeg
+  - first:
+      1: 100054
+    second: LeftShoulder
+  - first:
+      1: 100056
+    second: LeftToeBase
+  - first:
+      1: 100058
+    second: LeftUpLeg
+  - first:
+      1: 100060
+    second: //RootNode
+  - first:
+      1: 100062
+    second: Mummy_LP
+  - first:
+      1: 100064
+    second: Mummy_LP 1
+  - first:
+      1: 100066
+    second: Mummy_Wraps_LP
+  - first:
+      1: 100068
+    second: Neck
+  - first:
+      1: 100070
+    second: RightArm
+  - first:
+      1: 100072
+    second: RightFoot
+  - first:
+      1: 100074
+    second: RightForeArm
+  - first:
+      1: 100076
+    second: RightHand
+  - first:
+      1: 100078
+    second: RightHandIndex1
+  - first:
+      1: 100080
+    second: RightHandIndex2
+  - first:
+      1: 100082
+    second: RightHandIndex3
+  - first:
+      1: 100084
+    second: RightHandIndex4
+  - first:
+      1: 100086
+    second: RightHandMiddle1
+  - first:
+      1: 100088
+    second: RightHandMiddle2
+  - first:
+      1: 100090
+    second: RightHandMiddle3
+  - first:
+      1: 100092
+    second: RightHandMiddle4
+  - first:
+      1: 100094
+    second: RightHandPinky1
+  - first:
+      1: 100096
+    second: RightHandPinky2
+  - first:
+      1: 100098
+    second: RightHandPinky3
+  - first:
+      1: 100100
+    second: RightHandPinky4
+  - first:
+      1: 100102
+    second: RightHandRing1
+  - first:
+      1: 100104
+    second: RightHandRing2
+  - first:
+      1: 100106
+    second: RightHandRing3
+  - first:
+      1: 100108
+    second: RightHandRing4
+  - first:
+      1: 100110
+    second: RightHandThumb1
+  - first:
+      1: 100112
+    second: RightHandThumb2
+  - first:
+      1: 100114
+    second: RightHandThumb3
+  - first:
+      1: 100116
+    second: RightHandThumb4
+  - first:
+      1: 100118
+    second: RightLeg
+  - first:
+      1: 100120
+    second: RightShoulder
+  - first:
+      1: 100122
+    second: RightToeBase
+  - first:
+      1: 100124
+    second: RightUpLeg
+  - first:
+      1: 100126
+    second: Spine
+  - first:
+      1: 100128
+    second: Spine1
+  - first:
+      1: 100130
+    second: Spine2
+  - first:
+      4: 400000
+    second: Head
+  - first:
+      4: 400002
+    second: Hips
+  - first:
+      4: 400004
+    second: LeftArm
+  - first:
+      4: 400006
+    second: LeftFoot
+  - first:
+      4: 400008
+    second: LeftForeArm
+  - first:
+      4: 400010
+    second: LeftHand
+  - first:
+      4: 400012
+    second: LeftHandIndex1
+  - first:
+      4: 400014
+    second: LeftHandIndex2
+  - first:
+      4: 400016
+    second: LeftHandIndex3
+  - first:
+      4: 400018
+    second: LeftHandIndex4
+  - first:
+      4: 400020
+    second: LeftHandMiddle1
+  - first:
+      4: 400022
+    second: LeftHandMiddle2
+  - first:
+      4: 400024
+    second: LeftHandMiddle3
+  - first:
+      4: 400026
+    second: LeftHandMiddle4
+  - first:
+      4: 400028
+    second: LeftHandPinky1
+  - first:
+      4: 400030
+    second: LeftHandPinky2
+  - first:
+      4: 400032
+    second: LeftHandPinky3
+  - first:
+      4: 400034
+    second: LeftHandPinky4
+  - first:
+      4: 400036
+    second: LeftHandRing1
+  - first:
+      4: 400038
+    second: LeftHandRing2
+  - first:
+      4: 400040
+    second: LeftHandRing3
+  - first:
+      4: 400042
+    second: LeftHandRing4
+  - first:
+      4: 400044
+    second: LeftHandThumb1
+  - first:
+      4: 400046
+    second: LeftHandThumb2
+  - first:
+      4: 400048
+    second: LeftHandThumb3
+  - first:
+      4: 400050
+    second: LeftHandThumb4
+  - first:
+      4: 400052
+    second: LeftLeg
+  - first:
+      4: 400054
+    second: LeftShoulder
+  - first:
+      4: 400056
+    second: LeftToeBase
+  - first:
+      4: 400058
+    second: LeftUpLeg
+  - first:
+      4: 400060
+    second: //RootNode
+  - first:
+      4: 400062
+    second: Mummy_LP
+  - first:
+      4: 400064
+    second: Mummy_LP 1
+  - first:
+      4: 400066
+    second: Mummy_Wraps_LP
+  - first:
+      4: 400068
+    second: Neck
+  - first:
+      4: 400070
+    second: RightArm
+  - first:
+      4: 400072
+    second: RightFoot
+  - first:
+      4: 400074
+    second: RightForeArm
+  - first:
+      4: 400076
+    second: RightHand
+  - first:
+      4: 400078
+    second: RightHandIndex1
+  - first:
+      4: 400080
+    second: RightHandIndex2
+  - first:
+      4: 400082
+    second: RightHandIndex3
+  - first:
+      4: 400084
+    second: RightHandIndex4
+  - first:
+      4: 400086
+    second: RightHandMiddle1
+  - first:
+      4: 400088
+    second: RightHandMiddle2
+  - first:
+      4: 400090
+    second: RightHandMiddle3
+  - first:
+      4: 400092
+    second: RightHandMiddle4
+  - first:
+      4: 400094
+    second: RightHandPinky1
+  - first:
+      4: 400096
+    second: RightHandPinky2
+  - first:
+      4: 400098
+    second: RightHandPinky3
+  - first:
+      4: 400100
+    second: RightHandPinky4
+  - first:
+      4: 400102
+    second: RightHandRing1
+  - first:
+      4: 400104
+    second: RightHandRing2
+  - first:
+      4: 400106
+    second: RightHandRing3
+  - first:
+      4: 400108
+    second: RightHandRing4
+  - first:
+      4: 400110
+    second: RightHandThumb1
+  - first:
+      4: 400112
+    second: RightHandThumb2
+  - first:
+      4: 400114
+    second: RightHandThumb3
+  - first:
+      4: 400116
+    second: RightHandThumb4
+  - first:
+      4: 400118
+    second: RightLeg
+  - first:
+      4: 400120
+    second: RightShoulder
+  - first:
+      4: 400122
+    second: RightToeBase
+  - first:
+      4: 400124
+    second: RightUpLeg
+  - first:
+      4: 400126
+    second: Spine
+  - first:
+      4: 400128
+    second: Spine1
+  - first:
+      4: 400130
+    second: Spine2
+  - first:
+      21: 2100000
+    second: Mummy_mat
+  - first:
+      43: 4300000
+    second: Mummy_LP
+  - first:
+      43: 4300002
+    second: Mummy_Wraps_LP
+  - first:
+      74: 7400000
+    second: idle
+  - first:
+      74: 7400002
+    second: idleBreak
+  - first:
+      74: 7400004
+    second: taunt
+  - first:
+      74: 7400006
+    second: walk
+  - first:
+      74: 7400008
+    second: walkBackward
+  - first:
+      74: 7400010
+    second: dodge
+  - first:
+      74: 7400012
+    second: gotHit
+  - first:
+      74: 7400014
+    second: death
+  - first:
+      74: 7400016
+    second: attack1
+  - first:
+      74: 7400018
+    second: attack2
+  - first:
+      74: 7400020
+    second: cast
+  - first:
+      74: 7400022
+    second: openStanding
+  - first:
+      74: 7400024
+    second: openLaying
+  - first:
+      74: 7400026
+    second: staticStanding
+  - first:
+      74: 7400028
+    second: staticLaying
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Mummy_LP 1
+  - first:
+      137: 13700002
+    second: Mummy_Wraps_LP
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -187,6 +493,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 10
       lastFrame: 40
       wrapMode: 0
@@ -215,6 +522,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idleBreak
       takeName: Take 001
+      internalID: 0
       firstFrame: 45
       lastFrame: 140
       wrapMode: 0
@@ -243,6 +551,7 @@ ModelImporter:
     - serializedVersion: 16
       name: taunt
       takeName: Take 001
+      internalID: 0
       firstFrame: 145
       lastFrame: 195
       wrapMode: 0
@@ -271,6 +580,7 @@ ModelImporter:
     - serializedVersion: 16
       name: walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 200
       lastFrame: 220
       wrapMode: 0
@@ -299,6 +609,7 @@ ModelImporter:
     - serializedVersion: 16
       name: walkBackward
       takeName: Take 001
+      internalID: 0
       firstFrame: 225
       lastFrame: 245
       wrapMode: 0
@@ -327,6 +638,7 @@ ModelImporter:
     - serializedVersion: 16
       name: dodge
       takeName: Take 001
+      internalID: 0
       firstFrame: 250
       lastFrame: 280
       wrapMode: 0
@@ -355,6 +667,7 @@ ModelImporter:
     - serializedVersion: 16
       name: gotHit
       takeName: Take 001
+      internalID: 0
       firstFrame: 285
       lastFrame: 320
       wrapMode: 0
@@ -375,7 +688,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: PlayGotHitSfx
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -383,6 +703,7 @@ ModelImporter:
     - serializedVersion: 16
       name: death
       takeName: Take 001
+      internalID: 0
       firstFrame: 325
       lastFrame: 370
       wrapMode: 0
@@ -403,7 +724,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.15774637
+        functionName: PlayGotHitSfx
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -411,6 +739,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack1
       takeName: Take 001
+      internalID: 0
       firstFrame: 375
       lastFrame: 405
       wrapMode: 0
@@ -431,7 +760,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: PlayATKSfx
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -439,6 +775,7 @@ ModelImporter:
     - serializedVersion: 16
       name: attack2
       takeName: Take 001
+      internalID: 0
       firstFrame: 410
       lastFrame: 450
       wrapMode: 0
@@ -467,6 +804,7 @@ ModelImporter:
     - serializedVersion: 16
       name: cast
       takeName: Take 001
+      internalID: 0
       firstFrame: 450
       lastFrame: 500
       wrapMode: 0
@@ -495,6 +833,7 @@ ModelImporter:
     - serializedVersion: 16
       name: openStanding
       takeName: Take 001
+      internalID: 0
       firstFrame: 510
       lastFrame: 550
       wrapMode: 0
@@ -523,6 +862,7 @@ ModelImporter:
     - serializedVersion: 16
       name: openLaying
       takeName: Take 001
+      internalID: 0
       firstFrame: 560
       lastFrame: 670
       wrapMode: 0
@@ -551,6 +891,7 @@ ModelImporter:
     - serializedVersion: 16
       name: staticStanding
       takeName: Take 001
+      internalID: 0
       firstFrame: 510
       lastFrame: 511
       wrapMode: 0
@@ -579,6 +920,7 @@ ModelImporter:
     - serializedVersion: 16
       name: staticLaying
       takeName: Take 001
+      internalID: 0
       firstFrame: 560
       lastFrame: 561
       wrapMode: 0
@@ -611,25 +953,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -638,10 +983,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Hips
       humanName: Hips
@@ -1397,13 +1742,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: Hips
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

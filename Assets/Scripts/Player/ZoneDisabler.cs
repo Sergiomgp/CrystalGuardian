@@ -9,6 +9,7 @@ public class ZoneDisabler : MonoBehaviour
     [SerializeField] GameObject PrisionRoom;
     [SerializeField] GameObject SecretPassage;
     [SerializeField] GameObject Room_2;
+    [SerializeField] GameObject BLOCKENTRANCE;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +20,7 @@ public class ZoneDisabler : MonoBehaviour
             PrisionRoom.SetActive(false);
             SecretPassage.SetActive(false);
             Room_2.SetActive(false);
+            BLOCKENTRANCE.SetActive(true);
         }
     }
 }
