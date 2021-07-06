@@ -30,6 +30,7 @@ public class BossStats : MonoBehaviour
     {
         boss = GetComponent<BossController>();
         isAlive = true;
+        bossAlive = isAlive;
         enemyAnimations = GetComponentInChildren<Animator>();
         currenthealth = maxhealth;
         enemyHealthBar.value = CalculateHealth();
@@ -51,9 +52,6 @@ public class BossStats : MonoBehaviour
         {
             isAlive = false;
             bossAlive = isAlive;
-            Debug.Log(bossAlive);
-            //enemyAnimations.SetTrigger("flyDeathStart");
-            //DeathAnimation();
         }
 
         if (currenthealth > maxhealth)
@@ -79,6 +77,7 @@ public class BossStats : MonoBehaviour
         {
             currenthealth -= ammount;
             enemyAnimations.SetTrigger("flyGotHit");
+            boss.PlayGotHitSfx();
         }
 
     }

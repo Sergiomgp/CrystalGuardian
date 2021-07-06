@@ -13,6 +13,8 @@ public class PlayerSystems : MonoBehaviour
 
     #region MANA SYSTEM VARIABLES
     //UI STUFF
+    public GameObject shieldEnabled, shieldDisabled;
+
     public Slider manaBar;
     public Text manaText;
     // SYSTEM RELATED VARIABLES
@@ -24,7 +26,7 @@ public class PlayerSystems : MonoBehaviour
     #region SHIELD SYSTEM VARIABLES
     [SerializeField] private bool onCooldown;
     private GameObject shield;
-    private float cooldownTime = 2f;
+    private float cooldownTime = 5f;
     private Coroutine ShieldCD;
 
     #endregion
@@ -152,10 +154,14 @@ public class PlayerSystems : MonoBehaviour
         onCooldown = true;
         yield return new WaitForSeconds(cooldownTime);
         onCooldown = false;
+        shieldDisabled.SetActive(false);
+        shieldEnabled.SetActive(true);
     }
 
     private IEnumerator ActivateShield()
     {
+        shieldEnabled.SetActive(false);
+        shieldDisabled.SetActive(true);
         //changes player tag to shielded so it doesnt take damage during its duration
         player.isShielded = true;
         shield.SetActive(true);

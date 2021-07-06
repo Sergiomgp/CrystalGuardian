@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public Slider _staminaSlider;
     public float currentStamina;
-    public float regenDelay = .5f;
+    public float regenDelay = .1f;
     private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
     private Coroutine regen;
 
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
         while (currentStamina <= _staminaSlider.maxValue)
         {
-            currentStamina += _staminaSlider.maxValue / 250;
+            currentStamina += _staminaSlider.maxValue / 100;
             _staminaSlider.value = currentStamina;
 
             yield return regenTick;

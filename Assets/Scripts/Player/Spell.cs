@@ -58,12 +58,12 @@ public class Spell : MonoBehaviour
 
         if (spellChargeTime > 1 && spellChargeTime < 2)
         {
-            baseDamage = 25;
+            baseDamage = 20;
         }
 
         if (spellChargeTime >= 2)
         {
-            baseDamage = 50;
+            baseDamage = 30;
             applyDot = true;
 
         }

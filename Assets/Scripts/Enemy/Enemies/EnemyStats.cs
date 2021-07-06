@@ -29,6 +29,7 @@ public class EnemyStats : MonoBehaviour
 
     public GameObject prision;
     public bool imprisioned;
+    private float dotDuration = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -108,7 +109,7 @@ public class EnemyStats : MonoBehaviour
     {
         imprisioned = true;
         prision.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(dotDuration);
         prision.SetActive(false);
         imprisioned = false;
     }

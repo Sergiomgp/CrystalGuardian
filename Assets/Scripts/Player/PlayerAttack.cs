@@ -150,7 +150,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 ShootProjectile(5);
             }
-            p_Systems.ConsumeMana(20);
+            p_Systems.ConsumeMana(15);
             chargeTime = 0;
             _chargebarSlider.value = chargeTime;
         }

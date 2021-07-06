@@ -8,6 +8,10 @@ public class BossController : MonoBehaviour
     [SerializeField] GameObject ChargeBall;
     [SerializeField] GameObject Projectile;
     [SerializeField] GameObject Shield;
+
+    public AudioSource audioSource;
+    public AudioClip roarSFX;
+    public AudioClip gotHitSfx;
     public float lookRadius = 10f;
 
     BossStats boss;
@@ -19,6 +23,7 @@ public class BossController : MonoBehaviour
     public bool attacking;
     public bool AirPhase;
     public bool BossEngaged;
+    public static bool engaged;
     public bool AirPhaseComplete;
     public bool shieldActive;
 
@@ -31,10 +36,12 @@ public class BossController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         damageble = false;
         shieldActive = false;
         AirPhaseComplete = false;
         BossEngaged = false;
+        engaged = BossEngaged;
         AirPhase = false;
         attacking = false;
         boss = GetComponent<BossStats>();
@@ -54,6 +61,7 @@ public class BossController : MonoBehaviour
             if (distance <= lookRadius)
             {
                 BossEngaged = true;
+                engaged = BossEngaged;
                 StartCoroutine(Invincible());
                 TakeOffAnimation();
                 FaceTarget();
@@ -79,6 +87,7 @@ public class BossController : MonoBehaviour
         BossStats.bossAlive = false;
         Debug.Log(BossStats.bossAlive);
         BossEngaged = false;
+        engaged = false;
         AirPhase = false;
         AirPhaseComplete = true;
         agent.enabled = true;
@@ -101,6 +110,7 @@ public class BossController : MonoBehaviour
             agent.enabled = false;
             AirPhase = true;
             enemyAnimations.SetTrigger("idleTakeoff");
+            audioSource.PlayOneShot(roarSFX);
 
         }
         else { return; }
@@ -180,6 +190,11 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(7f);
         Shield.SetActive(false);
         shieldActive = false;
+    }
+
+    public void PlayGotHitSfx()
+    {
+        audioSource.PlayOneShot(gotHitSfx, .5f);
     }
 
     //randomizes what abilites the boss will use based on a random number
